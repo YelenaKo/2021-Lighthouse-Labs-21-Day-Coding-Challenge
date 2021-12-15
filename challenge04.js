@@ -39,7 +39,8 @@ const someToggle = {
 // }
 
 const switchToggle = (toggle) => { 
-    toggle.isOn === false ? toggle.isOn = true : toggle.isOn = false; 
+    // toggle.isOn === false ? toggle.isOn = true : toggle.isOn = false; 
+    toggle.isOn =!toggle.isOn; 
     return toggle
 }
 console.log(switchToggle(someToggle))
