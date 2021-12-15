@@ -1,7 +1,7 @@
 
 ### Challenge 1
 Function that takes two parameters and returns a string
-```
+```javascript
 const parseMessage = (origin, message) => {
       return(origin + ": " + message)
 }
@@ -14,7 +14,7 @@ Output:
 
 ### Challenge 2
 Function that takes an object as a parameter and returns a string.
-```
+```javascript
 const exampleAstronaut = {
     firstName: "Neil",
     lastName: "Armstrong",
@@ -33,7 +33,7 @@ Output:
 
 ### Challenge 3
 Function that takes an object as a parameter, and returns `true` if the current value is between the min and max, and returns `false` if outside.
-```
+```javascript
 const exampleGauge = {
     current:0.4,
     min:0.1,
@@ -49,13 +49,13 @@ Output:
 
 ### Challenge 4
 Toggle function that changes the value between true and false and returns the updated object. 
-```
+```javascript
 const someToggle = {
     name:"toggleA",
     isOn:false
 }
 const switchToggle = (toggle) => { 
-    toggle.isOn === false ? toggle.isOn = true : toggle.isOn = false; 
+    toggle.isOn =!toggle.isOn;  
     return toggle
 }
 console.log(switchToggle(someToggle))
@@ -67,7 +67,7 @@ Output:
 
 ### Challenge 5
 Function that assigns properties to object
-```
+```javascript
 const exampleAstronaut = {
     firstName:"Chris",
     lastName: "Hadfield",
@@ -91,4 +91,35 @@ Output:
 }
 ```
 
+### Challenge 6
+*array*`.push()` 
+
+> adds new items ***to the end*** of an array. <br>
+> changes the length of the array and ***returns the new length*** 
+
+> *array*`.pop()` removes last element, returns the removed element <br>
+> *array*`.shift()` removes the first item, returns the removed element <br>
+> *array*`.unshift()` adds new elements to the beginning of an array, overwrites the original array
+
+Function that takes an array and object, then push an object to the array and return the updated array
+```javascript
+const exampleRoster = []
+const exampleAstronaut = {
+    firstName:"Chris",
+    lastName: "Hadfield",
+}
+const addAstronautToRoster = (roster, astronaut) => {
+    roster.push(astronaut)
+    return(roster)
+}
+```
+```
+Output:
+[
+  {
+    firstName: 'Chris',
+    lastName: 'Hadfield',
+  }
+]
+```
 
